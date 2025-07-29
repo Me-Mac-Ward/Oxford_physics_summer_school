@@ -3,47 +3,28 @@ import matplotlib.pyplot as plt
 import matplotlib
 matplotlib.use('TkAgg')
 
+# constants used throughout
 BOHR_MAGNETON = 9.27 * 10**-24
 PLANCK_CONSTANT = 6.63 * 10**-34
-GYROMAGNETIC_FACTOR = 2.00
+GYROMAGNETIC_FACTOR = 2.00 # made into a scalar
+# defining the standard spin 1/2 matrices
+S_x = 0.5 * np.array([[0,1],[1,0]])
+S_z = 0.5 * np.array([[1,0],[0,-1]])
 
 
-
-
-
-# H = \mu_B g (S_x B_0 sin\theta + S_z B_0 cos\theta)
-def create_matrix(title):
-    ARows = int(input(f"Enter the number of rows of the {title} matrix: "))
-    ACols = int(input(f"Enter the number of columns of the {title} matrix: "))
-
-    AMatrix = []
-    print("Enter the matrix row by row, space separated\n")
-    for i in range(ARows):
-        row = list(map(complex, input(f"Row{i+1}: ").split()))
-        if len(row) != ACols:
-            print("Invalid, retry")
-            exit()
-        AMatrix.append(row)
-
-    A = np.array(AMatrix)
-    return A
-
-
-S_x = create_matrix("S_x")
-S_z = create_matrix("S_z")
-# B_0 = float(input("Enter value of B_0: ")) could replace defining the frequency
-frequency = 9.7 * 10**9
+# B_0 = float(input("Enter value of B_0: ")) could replace defining the frequency depending on goal of program
+frequency = 9.7 * 10**9 # hard coded goal - typical value used
 theta = float(input("Enter value of theta: "))
 
-energy_change = PLANCK_CONSTANT * frequency
 
+# \hat{H} / B_0 = \mu_B g (S_x \sin\theta + S_z \sin\theta)
 hamiltonian_NO_B_0 = (S_x * np.sin(theta) + S_z * np.cos(theta)) * BOHR_MAGNETON * GYROMAGNETIC_FACTOR
 
 
+
+coordinates1 = [];coordinates2 = [];difference = []
+
 intervals = 1000
-coordinates1 = []
-coordinates2 = []
-difference = []
 for i in range(0, intervals):
     B_0val = i/intervals
     
@@ -55,19 +36,30 @@ for i in range(0, intervals):
 
     difference.append([B_0val, abs(np.real(eigenvalue1/PLANCK_CONSTANT)-np.real(eigenvalue2/PLANCK_CONSTANT))])
 
+# first energy level
 npCoordinates1 = np.asarray(coordinates1)
 x1,y1 = npCoordinates1.T
+y1_in_GHz = y1 / 1e9
 
-plt.plot(x1,y1)
+plt.plot(x1,y1_in_GHz)
 
+# second energy level
 npCoordinates2 = np.asarray(coordinates2)
 x2,y2 = npCoordinates2.T
+y2_in_GHz = y2 / 1e9
 
-plt.plot(x2,y2)
+plt.plot(x2,y2_in_GHz)
+
+plt.xlabel("B_0 / T")
+plt.ylabel("f / GHz")
+
 plt.show()
 
 
 npDifference = np.asarray(difference)
 xDif, yDif = npDifference.T
-plt.plot(xDif,yDif)
+yDif_in_GHz = yDif / 1e9
+plt.plot(xDif,yDif_in_GHz)
+plt.xlabel("B_0 / T")
+plt.ylabel("f / GHz")
 plt.show()
