@@ -5,3 +5,5 @@ This repository contains the projects completed throughout the **Oxford Physics 
 ### Day 1 - Review of prior knowledge and Kronecker product
 - Here I learned the basis of the Kronecker product and representing qubits in vector form.
 - This was then implemented into a python program
+
+### Day 2 - 
