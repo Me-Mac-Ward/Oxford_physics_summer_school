@@ -7,4 +7,4 @@ This repository contains the projects completed throughout the **Oxford Physics 
 - This was then implemented into a python program
 
 ### Day 2 - Introduction to the Hamiltonian
-- I created a python programme to build the Hamiltonian for electron spin (1/2) in a magnetic field at angle \theta; calculating eigenvalues for varying magnetic field strength.
+- I created a python programme to build the Hamiltonian for electron spin (1/2) in a magnetic field at angle $\theta$; calculating eigenvalues for varying magnetic field strength.
