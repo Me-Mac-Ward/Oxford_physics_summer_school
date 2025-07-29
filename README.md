@@ -4,7 +4,8 @@ This repository contains the projects completed throughout the **Oxford Physics 
 
 ### Day 1 - Review of prior knowledge and Kronecker product
 - Here I learned the basis of the Kronecker product and representing qubits in vector form.
-- This was then implemented into a python program
+- This was then implemented into a python program.
 
 ### Day 2 - Introduction to the Hamiltonian
 - I created a python programme to build the Hamiltonian for electron spin (1/2) in a magnetic field at angle $\theta$; calculating eigenvalues for varying magnetic field strength.
+- Here I deduced that the target frequency of 9.7 GHz occurs at around 0.35 T.
