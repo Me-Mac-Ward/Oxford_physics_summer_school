@@ -16,13 +16,13 @@ I_2 = 0.5 * np.array([[1,0],[0,1]])
 theta = 0 # float(input("Enter value of theta: "))
 
 
-# Electron Zeeman / B_0 = \gamma_e (\sigma_x \otimes I_2 \sin\theta + \sigma_z \otimes I_2 \cos\theta
+# Electron Zeeman / B_0 = \gamma_e (\sigma_x \otimes I_2 \sin\theta + \sigma_z \otimes I_2 \cos\theta)
 electron_component_NO_B_0 = GYROMAGENTIC_RATIO_e * (np.kron(sigma_x, I_2) * np.sin(theta) + np.kron(sigma_z, I_2) * np.cos(theta)) 
-# Nuclear Zeeman / B_0 = \gamma_n (I_2 \otimes \sigma_z \sin\theta + I_2 \otimes \sigma_z \cos\theta)
+# Nuclear Zeeman / B_0 = \gamma_n (I_2 \otimes \sigma_x \sin\theta + I_2 \otimes \sigma_z \cos\theta)
 nuclear_component_NO_B_0 =  GYROMAGENTIC_RATIO_n * (np.kron(I_2, sigma_x) * np.sin(theta) + np.kron(I_2, sigma_z) * np.cos(theta))
 # Sum of Electron and Nuclear Zeeman
 electronuclear_NO_B_0 =  electron_component_NO_B_0 + nuclear_component_NO_B_0
-# A (\sigma_x \otimes \sigma_x + \sigma_z \otimes \sigma_z)
+# Hyperfine Component = A (\sigma_x \otimes \sigma_x + \sigma_z \otimes \sigma_z)
 hyperfine_component = HYPERFINE * (np.kron(sigma_x, sigma_x) + np.kron(sigma_z, sigma_z))
 
 # rows/columns of overall matrix
@@ -41,7 +41,7 @@ for i in range(0, intervals):
     eigenvalues, eigenvectors = np.linalg.eig(hamiltonian)
 
     for j in range(0, len(eigenvalues)):
-        lines[j].append([B_0val, np.real(eigenvalues[j])])
+        lines[j].append([B_0val, eigenvalues[j]])
 
 for i in range(0, matrix_dimension):
     npCoordinates = np.asarray(lines[i])
