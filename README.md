@@ -14,3 +14,8 @@ This repository contains the projects completed throughout the **Oxford Physics 
 - I explored the qiskit library exploring ket positions on the bloch sphere, and finding the axis-of-rotation for the Hadamard gate (eigenvectors), demonstrating this on the bloch sphere.
 - I developed the previous electron Hamiltonian to include a nucleus, the Hamiltonian including the Electron Zeeman, the Nuclear Zeeman and the Hyperfine interaction.
 - The previous then further developed to have another electron, introducing magnetic anistropy. Upon data analysis anticrossing was noticed but out of range for the project.
+
+### Day 4 - Tours of Relevant Companies
+- Oxford Ionics:
+- NQCC:
+- Oxford Instruments: 
