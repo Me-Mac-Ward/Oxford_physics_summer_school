@@ -1,4 +1,4 @@
-# Oxford Physics Summer School - Quantum Computing Projects (july-aug 2025)
+# Oxford Physics Summer School - Quantum Computing Projects (Jul-Aug 2025)
 
 This repository contains the projects completed throughout the **Oxford Physics Summer School - Year 12 Quantum Experience**. Each day, new quantum-mechanics topics were explored and developed to reach a final goal of --- ---, which was explored initially through maths, and then generalised with python programming. This was completed with WilliamMartin1000 see https://github.com/WilliamMartin1000.
 
@@ -16,6 +16,7 @@ This repository contains the projects completed throughout the **Oxford Physics 
 - The previous then further developed to have another electron, introducing magnetic anistropy. Upon data analysis anticrossing was noticed but out of range for the project.
 
 ### Day 4 - Tours of Relevant Companies
-- Oxford Ionics:
-- NQCC:
-- Oxford Instruments: 
+- Oxford Ionics: Here I saw the labs where quantum computing systems were developed, being shown a variety of ionic quantum computers and was taught how they worked.
+- ISIS Neutron and Muon Source: I got a general tour around the building seeing the synchrotron as well as neutron imaging machines.
+- NQCC: I got show the national quantum computing centre where tests surrounding quantum computers were done.
+- Oxford Instruments: I was shown around being taught about the refidgerant systems used to cool down quantum computers to the milli-Kelvin range.
