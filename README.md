@@ -20,3 +20,7 @@ This repository contains the projects completed throughout the **Oxford Physics 
 - ISIS Neutron and Muon Source: I got a general tour around the building seeing the synchrotron as well as neutron imaging machines.
 - NQCC: I got show the national quantum computing centre where tests surrounding quantum computers were done.
 - Oxford Instruments: I was shown around being taught about the refidgerant systems used to cool down quantum computers to the milli-Kelvin range.
+
+### Day 5 - Poster Creation, Presentation and Interview Panel
+- Over a couple of hours we created a poster covering our research for the week. This was the later presented to the cohort, supervisors, and others present.
+- We also had discussions with professionals in the subject exploring future possible career paths and annulling any outstanding questions.
