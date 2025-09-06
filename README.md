@@ -3,7 +3,8 @@
 This repository contains the projects completed throughout the **Oxford Physics Summer School - Year 12 Quantum Experience**. Each day, new quantum-mechanics topics were explored and developed to reach a final goal of **modelling spin-field interactions in simple structures**, which was explored initially through maths, then generalised with python programming, and finalised with a poster presentation. This was completed with **WilliamMartin1000** see https://github.com/WilliamMartin1000.
 
 ### Day 1 - Review of Prior Knowledge and the Kronecker Product
-- Here I learned the basis of the Kronecker product and representing qubits in vector form.
+- I reviewed my knowledge of quantum computing/mechanics up to this point.
+- Here I learned the basis of the Kronecker product and representing qubits and gates in vector form.
 - This was then implemented into a python program.
 
 ### Day 2 - Introduction to the Hamiltonian
